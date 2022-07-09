@@ -2,11 +2,28 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; /* might have to get rid of this */
     font-family: 'Playfair Display', serif;
 }
 
 body {
-    background: #000000
+    min-height: 100vh;
+    background: #000000;
     
+}
+
+.pyramidContainer {
+    position: relative;
+    width: 100%;
+    height: 1500;
+}
+
+.pyramid {
+    width: 100%;
+    height: 0;
+    padding-top: 90.888%;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-image: url('/media/marquise/DRIVE/Documents - Copy/Illuminati Apprentice website/ill_app_scripts/images/Frame6.png');
 }
