@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Playfair+Display&display=swap');
 
+/*
+Frame 6 (eye closed): https://drive.google.com/file/d/1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43/view?usp=sharing
+Frame 5: https://drive.google.com/file/d/1ex6FSuyQ9G5tV2ouiqs-HkV3EtbO21p5/view?usp=sharing
+Frame 4: https://drive.google.com/file/d/1Yx7J7jFtfRTY3c3xqkItZf8MnXaEsYKr/view?usp=sharing
+Frame 3: https://drive.google.com/file/d/1DiiP6MOMaOXE6cfpchLfmIQm04-fWb8i/view?usp=sharing
+Frame 2: https://drive.google.com/file/d/1cpLhrtHEBQQwvKxrsA0Is47kM-EXa6XP/view?usp=sharing
+Frame 1 (eye open): https://drive.google.com/file/d/1o4b_89tZmKP-hxUVwnkQzeS2yt4d0O6N/view?usp=sharing
+
+Export 6: 'https://drive.google.com/uc?export=view&id=1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43'
+Export 5: 'https://drive.google.com/uc?export=view&id=1ex6FSuyQ9G5tV2ouiqs-HkV3EtbO21p5'
+Export 4: 'https://drive.google.com/uc?export=view&id=1Yx7J7jFtfRTY3c3xqkItZf8MnXaEsYKr'
+Export 3: 'https://drive.google.com/uc?export=view&id=1DiiP6MOMaOXE6cfpchLfmIQm04-fWb8i'
+Export 2: 'https://drive.google.com/uc?export=view&id=1cpLhrtHEBQQwvKxrsA0Is47kM-EXa6XP'
+Export 1: 'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2yt4d0O6N'
+*/
+
 * {
     margin: 0;
     padding: 0; /* might have to get rid of this */
@@ -25,5 +41,5 @@ body {
     position: sticky;
     top: 0;
     background-size: cover;
-    background-image: url('/media/marquise/DRIVE/Documents - Copy/Illuminati Apprentice website/ill_app_scripts/images/Frame6.png');
+    background-image: url('https://drive.google.com/uc?export=view&id=1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43');
 }
