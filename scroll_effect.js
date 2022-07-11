@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Playfair+Display&display=swap');
-
 /*
 Frame 6 (eye closed): https://drive.google.com/file/d/1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43/view?usp=sharing
 Frame 5: https://drive.google.com/file/d/1ex6FSuyQ9G5tV2ouiqs-HkV3EtbO21p5/view?usp=sharing
@@ -16,32 +14,26 @@ Export 2: 'https://drive.google.com/uc?export=view&id=1cpLhrtHEBQQwvKxrsA0Is47kM
 Export 1: 'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2yt4d0O6N'
 */
 
-/* Frame by frame animation scroll: https://levelup.gitconnected.com/how-to-create-frame-by-frame-moving-image-on-scroll-effect-30ce577c63c2 */
-
-* {
-    margin: 0;
-    padding: 0; /* might have to get rid of this */
-    font-family: 'Playfair Display', serif;
+// Images asset
+const pyramidImages = {
+    1:'https://drive.google.com/uc?export=view&id=1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43', // Export 6
+    2:'https://drive.google.com/uc?export=view&id=1ex6FSuyQ9G5tV2ouiqs-HkV3EtbO21p5', // Export 5
+    3:'https://drive.google.com/uc?export=view&id=1Yx7J7jFtfRTY3c3xqkItZf8MnXaEsYKr', // 4
+    4:'https://drive.google.com/uc?export=view&id=1DiiP6MOMaOXE6cfpchLfmIQm04-fWb8i', // 3
+    5:'https://drive.google.com/uc?export=view&id=1cpLhrtHEBQQwvKxrsA0Is47kM-EXa6XP', // 2
+    6:'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2yt4d0O6N', // 1
 }
 
-body {
-    min-height: 100vh;
-    background: #000000;
-    
-}
 
-.Container {
-    position: relative;
-    width: 100%;
-    height: 1500;
-}
-
-.pyramidContainer {
-    width: 100%;
-    height: 0;
-    padding-top: 90.888%;
-    position: sticky;
-    top: 0;
-    background-size: cover;
-    background-image: url('https://drive.google.com/uc?export=view&id=1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43');
-}
+// Global variable to control the scrolling behavior
+const step = 30; // For each 30px, change an image
+function trackScrollPosition() {
+  const y = window.scrollY;
+  const label = Math.min(Math.floor(y/30) + 1, 20);
+  const imageToUse = pyramidImages[label];
+  // Change the background image
+  $('.pyramidContainer').css('background-image', `url('${imageToUse}')`);}$(document).ready(()=>{
+  $(window).scroll(()=>{
+    trackScrollPosition();
+  })
+})
