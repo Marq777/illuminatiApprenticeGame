@@ -26,14 +26,20 @@ const pyramidImages = {
 
 
 // Global variable to control the scrolling behavior
-const step = 30; // For each 30px, change an image
+const step = 120; // For each 30px, change an image
+
 function trackScrollPosition() {
   const y = window.scrollY;
-  const label = Math.min(Math.floor(y/30) + 1, 20);
+  const label = Math.min(Math.floor(y/step) + 1, 6);
   const imageToUse = pyramidImages[label];
   // Change the background image
-  $('.pyramidContainer').css('background-image', `url('${imageToUse}')`);}$(document).ready(()=>{
+  $('.pyramidContainer').css('background-image', `url('${imageToUse}')`);
+
+  }
+  
+$(document).ready(()=>{
   $(window).scroll(()=>{
     trackScrollPosition();
   })
 })
+
