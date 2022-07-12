@@ -26,7 +26,7 @@ const pyramidImages = {
 
 
 // Global variable to control the scrolling behavior
-const step = 120; // For each 30px, change an image
+const step = 30; // For each 30px, change an image
 
 function trackScrollPosition() {
   const y = window.scrollY;

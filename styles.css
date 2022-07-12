@@ -18,11 +18,21 @@ Export 1: 'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2y
 
 /* Frame by frame animation scroll: https://levelup.gitconnected.com/how-to-create-frame-by-frame-moving-image-on-scroll-effect-30ce577c63c2 */
 
-/* * {
+
+
+
+
+
+        /*GENERAL ELEMENT SELECTORS (A to Z)*/
+* {
     margin: 0;
     padding: 0; 
     font-family: 'Playfair Display', serif;
-} */
+    font-size: 30px;
+} 
+
+
+
 
 body {
     /* min-height: 100vh; */
@@ -30,11 +40,27 @@ body {
     margin: 0;
 }
 
+h1 {
+    color: #fffee9;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+p {
+    color: #fffee9;
+    text-align: left;
+    margin: 10px 30px 10px 30px;
+}
+
+
+        /*SELECTORS BY CLASS (A to Z)*/
 .container {
     position: relative;
     width: 100%;
     height: 1500;
 }
+
+
 
 .pyramidContainer {
     width: 100%;
@@ -42,10 +68,31 @@ body {
     padding-top: 90.888%;
     position: sticky;
     top: 0;
-    background-size: 80%;
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
     background-image: url('https://drive.google.com/uc?export=view&id=1PvNAM4QIpj3bFN8dw2sZ6tCO3-LRhV43');
     }
 
 
+        /*SELECTORS BY ID (A to Z)*/
+
+#scrapLink:link {
+    color: white;
+}
+
+#scrapLink:hover {
+    color: hotpink;
+}
+
+#scrapLink:active {
+    color: #14ef46;
+}
+
+#scrapLink:visited {
+    color: #4df4e5;
+}
+
+#captcha-form::placeholder {
+    font-size: 0.7em;
+}
