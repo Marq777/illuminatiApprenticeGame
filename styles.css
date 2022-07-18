@@ -26,13 +26,11 @@ Export 1: 'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2y
         /*GENERAL ELEMENT SELECTORS (A to Z)*/
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    box-sizing: border-box; 
     font-family: 'Playfair Display', serif;
     font-size: 30px;
 } 
-
-
-
 
 body {
     /* min-height: 100vh; */
@@ -54,13 +52,68 @@ p {
 
 
         /*SELECTORS BY CLASS (A to Z)*/
+.captcha {
+    margin: 15px 0px;
+}
+
+.captcha .captcha-form {
+    display: flex;
+}
+
+.captcha .captcha-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1ox solid #888;
+}
+
+.captcha label {
+    display: block;
+    font-size: 0.8em;
+    color: #fffee9;
+}
+
+.captcha .captcha-form .captcha-refresh {
+    width: 40px;
+    border: none;
+    outline: none;
+    background: #888;
+    color: #eee;
+    cursor: pointer;
+}
+
+.captcha .preview {
+    color: #eee;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 8px;
+    border: 1px dashed #888;
+    font-family: "monospace";
+    
+}
+
+.captcha .preview span {
+    display: inline-block;
+    user-select: none;
+}
+
+.captcha .captcha-form .preview {
+    max-width: 300px;
+}
+
 .container {
     position: relative;
     width: 100%;
     height: 1500;
 }
 
-
+.form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #888;
+    font-size: 0.8em;
+}
 
 .pyramidContainer {
     width: 100%;
@@ -95,4 +148,13 @@ p {
 
 #captcha-form::placeholder {
     font-size: 0.7em;
+}
+
+#enter-button {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.8em;
 }
