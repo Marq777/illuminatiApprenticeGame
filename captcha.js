@@ -12,12 +12,12 @@
         let html = captchaValue.split("").map((char)=>{
             const rotate = -20 + Math.trunc(Math.random()*30);
             const font = Math.trunc(Math.random()*fonts.length);
-            return <span
+            return `<span
                 style="
                     transform:rotate(${rotate}deg);
-                    font-family:${fonts[font]}
+                    font-family:${fonts[font]};
                 "
-            >${char}</span>
+            >${char}</span>`
         }).join("");
         document.querySelector(".captcha .preview").innerHTML = html;
     }
