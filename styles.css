@@ -21,7 +21,7 @@ Export 1: 'https://drive.google.com/uc?export=view&id=1o4b_89tZmKP-hxUVwnkQzeS2y
 
 
 
-
+            /*FOR INDEX.HTML AND ALL(*) SELECTOR*/
 
         /*GENERAL ELEMENT SELECTORS (A to Z)*/
 * {
@@ -156,4 +156,18 @@ p {
     border: none;
     outline: none;
     font-size: 0.8em;
+}
+
+
+
+
+            /*FOR TERMS_AND_CONDITIONS*/
+
+.terms-checkbox {
+    margin: auto;
+}
+
+.terms-and-conditions {
+    width: 50%;
+    margin: 100px auto;
 }

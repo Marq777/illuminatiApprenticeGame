@@ -34,9 +34,10 @@
     document.querySelector("#enter-button").addEventListener("click",function(){
         let inputCaptchaValue = document.querySelector(".captcha input").value;
         if(inputCaptchaValue === captchaValue){
-            swal("", "Logging In!", "success");
+            alert("You may proceed");
+            location.replace("terms_and_conditions.html");
         } else {
-            swal("Invalid captcha");
+            alert("Invalid captcha");
         }
     });
 })();
