@@ -161,13 +161,37 @@ p {
 
 
 
-            /*FOR TERMS_AND_CONDITIONS*/
+            /*FOR TERMS_AND_CONDITIONS.HTML*/
 
-.terms-checkbox {
+.terms-checkbox-container {
     margin: auto;
 }
 
-.terms-and-conditions {
+.terms-and-conditions-text {
     width: 50%;
     margin: 100px auto;
+}
+
+#continue-from-terms-button { 
+    display: none
+}
+
+:checked ~ #continue-from-terms-button {
+    font-style: italic;
+    color: black;  
+    display: inherit;
+}
+
+#verification {
+    color: #fffee9;
+}
+
+            /*FOR PERSONALITY TEST.HTML*/
+
+.personalityQuestions {
+    color: #fffee9;
+}
+
+.PersonalityAnswer1, .PersonalityAnswer2, .PersonalityAnswer3, .PersonalityAnswer4 {
+    color: #fffee9;
 }
