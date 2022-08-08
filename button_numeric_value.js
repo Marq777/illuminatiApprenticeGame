@@ -1,8 +1,8 @@
-(function() {
-    const onePoint = document.querySelector(".PersonalityAnswer1 input").value;     //Assign dividers into variables by points
-    const twoPoints = document.querySelector(".PersonalityAnswer2 input").value;
-    const threePoints = document.querySelector(".PersonalityAnswer3 input").value;
-    const fourPoints = document.querySelector(".PersonalityAnswer4 input").value;
+(document).ready(function () {
+    /*const onePoint = parseInt(document.querySelector(".PersonalityAnswer1 input").value);     //Assign dividers into variables by points
+    const twoPoints = parseInt(document.querySelector(".PersonalityAnswer2 input").value);
+    const threePoints = parseInt(document.querySelector(".PersonalityAnswer3 input").value);
+    const fourPoints = parseInt(document.querySelector(".PersonalityAnswer4 input").value); */
 
 
     /*function checkButtons1to4() {
@@ -13,13 +13,23 @@
         Q1A2_true.checked = true;
 
     }*/
+    
+    var $first_question = parseInt("#Question1 input[name=questionOneChoice]:checked".val());
+    var $second_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".val());
+    var $third_question = parseInt("#Question3 input[name=questionThreeChoice]:checked".val());
+    var $fourth_question = parseInt("#Question4 input[name=questionFourChoice]:checked".val());
+    var $fifth_question = parseInt("#Question5 input[name=questionFiveChoice]:checked".val());
+    
 
-    function checkAnswer(question) {
+    var $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question; //total score
 
-    }
+    //document.querySelector("#submit-quiz-button").addEventListener("click",function(){
 
+    alert($total_score); 
 
-    function addValues() {
+});
+
+    /*function addValues() {
         const onePoint = 1;
         const twoPoints = 2;
         const threePoints = 3;
@@ -36,6 +46,8 @@
     });
 })();
 
+*/
+
 
 /* 
 
@@ -46,3 +58,4 @@
 5. Check if sum is greater than the set number to allow entry
 
 */
+
