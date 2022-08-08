@@ -1,4 +1,4 @@
-(document).ready(function () {
+(function () {
     /*const onePoint = parseInt(document.querySelector(".PersonalityAnswer1 input").value);     //Assign dividers into variables by points
     const twoPoints = parseInt(document.querySelector(".PersonalityAnswer2 input").value);
     const threePoints = parseInt(document.querySelector(".PersonalityAnswer3 input").value);
@@ -14,19 +14,25 @@
 
     }*/
     
-    var $first_question = parseInt("#Question1 input[name=questionOneChoice]:checked".val());
-    var $second_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".val());
+    //var $first_question = +document.getElementById("Q1A1_button")
+    
+    
+    /*var $second_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".val());
     var $third_question = parseInt("#Question3 input[name=questionThreeChoice]:checked".val());
     var $fourth_question = parseInt("#Question4 input[name=questionFourChoice]:checked".val());
     var $fifth_question = parseInt("#Question5 input[name=questionFiveChoice]:checked".val());
     
 
-    var $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question; //total score
+    var $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question; */ //total score
 
     //document.querySelector("#submit-quiz-button").addEventListener("click",function(){
+    alert("something");
+    console.log("This function has been reached");
 
-    alert($total_score); 
-
+    document.querySelector("#submit-quiz-button").addEventListener("click",function(){
+        alert("something2");
+        location.replace("terms_and_conditions.html");
+    });
 });
 
     /*function addValues() {
