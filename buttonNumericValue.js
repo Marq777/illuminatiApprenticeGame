@@ -1,4 +1,5 @@
-(function () {
+$(document).ready(function () {
+    $('input:radio').on('change',function(){
     /*const onePoint = parseInt(document.querySelector(".PersonalityAnswer1 input").value);     //Assign dividers into variables by points
     const twoPoints = parseInt(document.querySelector(".PersonalityAnswer2 input").value);
     const threePoints = parseInt(document.querySelector(".PersonalityAnswer3 input").value);
@@ -13,11 +14,13 @@
         Q1A2_true.checked = true;
 
     }*/
+        alert("this works");
+        var $first_question = parseInt($('input[name="questionOneChoice"]:checked').val());
+        $first_question = $first_question? $first_question : 0;
+
     
-    //var $first_question = +document.getElementById("Q1A1_button")
-    
-    
-    /*var $second_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".val());
+    /*var $first_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".value());
+    var $second_question = parseInt("#Question2 input[name=questionTwoChoice]:checked".value());
     var $third_question = parseInt("#Question3 input[name=questionThreeChoice]:checked".val());
     var $fourth_question = parseInt("#Question4 input[name=questionFourChoice]:checked".val());
     var $fifth_question = parseInt("#Question5 input[name=questionFiveChoice]:checked".val());
@@ -26,12 +29,17 @@
     var $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question; */ //total score
 
     //document.querySelector("#submit-quiz-button").addEventListener("click",function(){
-    alert("something");
-    console.log("This function has been reached");
-
-    document.querySelector("#submit-quiz-button").addEventListener("click",function(){
-        alert("something2");
-        location.replace("terms_and_conditions.html");
+    //alert("something");
+    //console.log("This function has been reached");
+        alert($first_question);
+        document.querySelector("#submit-quiz-button").addEventListener("click",function(){
+            if($first_question>2) {
+                alert("something2");
+                location.replace("terms_and_conditions.html");
+            } else {
+                alert("Try again loser");
+            }
+    });
     });
 });
 
