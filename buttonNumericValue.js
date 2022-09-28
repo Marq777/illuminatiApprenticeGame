@@ -1,31 +1,40 @@
-(function() {
-    $(document).ready(function () {
-        $('input:radio').on('change',function(){
-            var $1st_question = document.querySelector('input[name="questionTwoChoice"]:checked').val();
-            var $2nd_question = document.querySelector('input[name="questionTwoChoice"]:checked').val();
-            var $3rd_question = document.querySelector('input[name="questionThreeChoice"]:checked').value;
-            var $4th_question = document.querySelector('input[name="questionFourChoice"]:checked').value;
-            var $5th_question = document.querySelector('input[name="questionFiveChoice"]:checked').value;
-            $1st_question = $1st_question? $1st_question : 0; 
-            $2nd_question = $2nd_question? $2nd_question : 0;
-            $3rd_question = $3rd_question? $3rd_question : 0; 
-            $4th_question = $4th_question? $4th_question : 0;
-            $5th_question = $5th_question? $5th_question : 0;
-            
-            var $total_score = $1st_question + $2nd_question + $3rd_question + $4th_question + $5th_question;
-        });
-    })();
+let $total_score = 0;
 
+$(document).ready(function () {
+    $('input:radio').on('change',function(){
     
-    document.querySelector("#submit-quiz-button").addEventListener("click",function(){
-        if($total_score>=16) {
-            alert("You devious soul. You scored a " + $total_score + ". You may proceed.");
-            console.log("good");
-            //let questionValueArray = [];
-            //location.replace("terms_and_conditions.html");
-        } else {
-            alert("Sorry but you need an evilness score of 16 or higher to proceed. And you scored a " + $total_score + ". You have failed. Here's a nice collage of cat pictures to distract you from our existence.");
-            console.log("gooder");
-        };
-    });       
-})();
+        var $first_question = parseInt($('input[name=questionOneChoice]:checked').val());    
+        var $second_question = parseInt($('input[name=questionTwoChoice]:checked').val());
+        var $third_question = parseInt($('input[name=questionThreeChoice]:checked').val());
+        var $fourth_question = parseInt($('input[name=questionFourChoice]:checked').val());
+        var $fifth_question = parseInt($('input[name=questionFiveChoice]:checked').val());;
+        $first_question = $first_question? $first_question : 0;
+        $second_question = $second_question? $second_question : 0;
+        $third_question = $third_question? $third_question : 0;
+        $fourth_question = $fourth_question? $fourth_question : 0;
+        $fifth_question = $fifth_question? $fifth_question : 0;
+        
+        
+        console.log("1st = " + $first_question); //For debugging in browser console/to see if number values line up.
+        console.log("2nd = " + $second_question);
+        console.log("3rd = " + $third_question);
+        console.log("4th = " + $fourth_question);
+        console.log("5th = " + $fifth_question);
+        console.log("total score is " + $total_score);
+    
+        return $total_score = $first_question + $second_question + $third_question + $fourth_question + $fifth_question;
+   
+        
+    });
+});
+
+document.querySelector("#submit-quiz-button").addEventListener("click",function(){
+    if($total_score>=16) {
+        alert("Devious soul, you scored " + $total_score + ". You may proceed.");
+        console.log("returned total score is " + $total_score);
+        //location.replace("terms_and_conditions.html");
+    } else {
+        alert("Try again loser. You scored " + $total_score + ".");
+        console.log("returned total score is " + $total_score);
+    }
+});
