@@ -195,3 +195,29 @@ p {
 .PersonalityAnswer1, .PersonalityAnswer2, .PersonalityAnswer3, .PersonalityAnswer4 {
     color: #fffee9;
 }
+
+            /*FOR INTERPRETATIVE_DEDUCTION.HTML*/
+
+.Interpretation-Instruction {
+    margin: auto;
+    width: 50%;
+}
+
+.Interpretation-Instruction p {
+    text-align: center;
+}
+
+#YouTubeVideo {
+    margin: auto;
+    width: 50%;
+}
+
+#essayContainer {
+    margin: 90px auto auto auto;
+    width: 50%;
+}
+
+#essay {
+    font-family:"Times New Roman", Times, serif;  
+    font-size: 20px;
+}
